@@ -1,5 +1,10 @@
 <section class="cart-show">
-
+<pre><%= @cart_total.inspect %></pre>
+<% if quantity == 0 %>
+<li>
+  Your cart is empty!
+</li>
+<% else %>
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
@@ -49,5 +54,5 @@
       <% end %>
     </div>
   </div>
-
+  <% end %>
 </section>
