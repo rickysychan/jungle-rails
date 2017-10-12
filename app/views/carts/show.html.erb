@@ -1,9 +1,11 @@
 <section class="cart-show">
-<pre><%= @cart_total.inspect %></pre>
-<% if quantity == 0 %>
-<li>
+<% if cart.size == 0 %>
+<h1>
   Your cart is empty!
-</li>
+<h1>
+<h4>
+<%= link_to "Home Page", root_path %>
+</h4>
 <% else %>
   <header class="page-header">
     <h1>My Cart</h1>
