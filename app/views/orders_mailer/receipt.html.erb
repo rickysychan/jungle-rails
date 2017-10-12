@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>This is your Jungle order number, <%= @order.id %></h1>
+    <p>
+    Hello! Your order has been processed
+    </p>
+    <% @order.line_items.each do |line_item| %>
+      <p>
+      <%= line_item.product_name %>
+      </td>
+      <td>
+      price: 
+      <%= line_item.product.price %>
+      </td>
+      qty: 
+      <td><%= line_item.quantity %>
+      </p>
+      <% end %>
+    <p>
+    Your order total is <%= '%.2f' % (@order.total_cents/100) %>
+    </p>
+    <p>Thanks for your order and have a nice day!</p>
+  </body>
+</html>
