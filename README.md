@@ -4,9 +4,9 @@ Jungle is a full stack web application built with Ruby, rails, PostgreSQL that a
 
 ## Final product
 
-![This is the home page](https://github.com/rickysychan/mzr_foodapp/blob/master/docs/Landing_page.png)
-![Registration page](https://github.com/rickysychan/mzr_foodapp/blob/master/docs/Registration.png)
-![Menu page](https://github.com/rickysychan/mzr_foodapp/blob/master/docs/Menu_page.png)
+![This is the home page](https://github.com/rickysychan/jungle-rails/blob/master/docs/Home%20page.png)
+![Registration page](https://github.com/rickysychan/jungle-rails/blob/master/docs/Sign%20up%20page.png)
+![Product page](https://github.com/rickysychan/jungle-rails/blob/master/docs/Product%20page.png)
 
 ## Dependencies
 gem 'rails', '4.2.6'
