@@ -29,14 +29,6 @@
 
   <table class="table table-bordered">
   <% if current_user %>
-  <h4> Product review <h4>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-
     <%= form_for [@product, Review.new] do |form| %>
 
       <% if form.object.errors.any? %>
@@ -67,6 +59,11 @@
   <% end %>
   <tbody>
   <h4> Other reviews <h4>
+
+  <td>Name</td>
+  <td>Comments</td>
+  <td>Rating</td>
+  
   <%= render 'reviews'%>
   </tbody>
 </section>

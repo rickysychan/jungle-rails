@@ -1,10 +1,20 @@
 <% @reviews.each do |review| %>
-<tr>
-<td>
-<%= review.description %>
-</td>
-<td>
-<%= review.rating %> / 5
-</td>
-</tr>
+    <tr>
+
+    <td>
+    <%= review.user.name %>
+    </td>
+    <td>
+    <%= review.description %>
+    </td>
+    <td>
+    <%= review.rating %> / 5
+    </td>
+    <% if current_user && current_user.id == review.user_id  %>
+    <td>
+    <%= link_to fa_icon('trash'), review_path(review), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+    </td>
+    <% else %>
+    <% end %>
+    </tr>
 <% end %>
