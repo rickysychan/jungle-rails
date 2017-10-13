@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
     has_secure_password
 
+    has_many :reviews 
+
     after_create :send_registration_email
 
     private

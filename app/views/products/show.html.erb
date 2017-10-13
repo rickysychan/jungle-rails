@@ -31,13 +31,38 @@
   <h4> Product review <h4>
   <thead>
     <tr>
-      <th>ProductID</th>
-      <th>UserID</th>
       <th>Description</th>
       <th>Rating</th>
     </tr>
   </thead>
+
+  <%= form_for [@product, Review.new] do |form| %>
+
+        <% if form.object.errors.any? %>
+          <div class="alert alert-danger">
+            <strong>The following errors prevented saving:</strong>
+            <ul>
+              <% form.object.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+        <%= form.label :rating %>
+        <%= form.select :rating, ((1..5)) %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :description %>
+          <%= form.text_area :description, class: 'form-control' %>
+        </div>
+
+        <%= form.submit 'Submit Review', class: 'btn btn-primary' %>
+        <% end %>
   <tbody>
+  <h4> Other reviews <h4>
   <%= render 'reviews' %>
   </tbody>
 </section>
