@@ -1,4 +1,4 @@
-# FoodApp Project
+# Jungle Project
 
 Jungle is a full stack web application built with Ruby, rails, PostgreSQL that allows users to register for an account, order items, and even rating the items and comment about them.
 
